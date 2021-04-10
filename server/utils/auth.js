@@ -11,7 +11,7 @@ module.exports = {
     // ["Bearer", "<tokenvalue>"]
     if (req.headers.authorization) {
       token = token
-        .split(' ')
+        .split(' ')[1]
         .pop()
         .trim();
     }
