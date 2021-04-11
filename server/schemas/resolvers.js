@@ -10,7 +10,7 @@ const resolvers = {
           .select('-__v -password')
           .populate('thoughts')
           .populate('friends');
-
+          console.log(userData);
         return userData;
       }
 
@@ -58,6 +58,7 @@ const resolvers = {
       }
 
       const token = signToken(user);
+      console.log(user);
       return { token, user };
     },
     addThought: async (parent, args, context) => {
